@@ -4,7 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-3">
-            <img class="rounded-circle" width="150" src="/storage/{{$profile->image}}">
+             @if (empty($profile->image))
+
+                        <img class="rounded-circle" width="150" src="{{ url('/images/profile.png') }}">
+                        @else:
+
+                        <img class="rounded-circle" width="150" src="/{{ $profile->image }}"> 
+                        @endif
             <strong>Hello {{ $user->name }}</strong>
                 <div class="pt-3">{{$profile->description}}</div>
                 <div class="pt-3"><a href="profile/edit">Edit Profile</div>
