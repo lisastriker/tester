@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 <div>Making changes in laravel</div>
+                <div>Making changes for branching</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
